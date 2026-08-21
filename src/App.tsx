@@ -145,13 +145,13 @@ export default function Home() {
       <section className="film-section" id="film">
         <div className="section-heading section-heading--light">
           <p>01 / THE MAIN EVENT</p>
-          <h2>Thirteen seconds of<br /><em>very serious cinema.</em></h2>
+          <h2>Twenty-nine seconds of<br /><em>us, basically.</em></h2>
         </div>
         <div className="film-layout">
           <div className="phone-frame">
             <div className="phone-speaker" />
-            <video controls playsInline preload="auto" poster="./media/birthday-poster.jpg">
-              <source src="./media/birthday-reel-v2.mp4" type="video/mp4" />
+            <video controls playsInline preload="auto" poster="./media/birthday-poster-v2.jpg">
+              <source src="./media/birthday-montage-v3.mp4" type="video/mp4" />
               Your browser does not support MP4 video.
             </video>
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
             <p>Starring</p>
             <h3>Dishu as herself</h3>
             <p className="muted">Cutest thing on the planet. Questionable dancing. Very charming.</p>
-            <div className="credits"><span>runtime</span><b>00:13</b><span>rating</span><b>∞ / 10</b></div>
+            <div className="credits"><span>runtime</span><b>00:29</b><span>rating</span><b>∞ / 10</b></div>
           </aside>
         </div>
       </section>
