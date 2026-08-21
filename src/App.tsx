@@ -90,8 +90,8 @@ export default function Home() {
         <div className="gift-card">
           <span className="mini-label">FOR DISHU · 23 TODAY</span>
           <div className="gift-number">23</div>
-          <h1>A tiny birthday thing.</h1>
-          <p>Best opened with full volume and zero judgement.</p>
+          <h1>A tiny birthday gift.</h1>
+          <p>Volume up. Dignity optional.</p>
           <button onClick={() => { setOpened(true); celebrate(); }}>
             tap to unwrap <span aria-hidden="true">↗</span>
           </button>
