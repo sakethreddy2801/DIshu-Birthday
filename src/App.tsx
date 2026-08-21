@@ -52,7 +52,7 @@ function Sparkles({ burst = false }: { burst?: boolean }) {
 export default function Home() {
   const [opened, setOpened] = useState(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
-  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [phraseIndex, setPhraseIndex] = useState(-1);
   const [burst, setBurst] = useState(false);
 
   useEffect(() => {
@@ -116,12 +116,12 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> THE BIRTHDAY EDIT · VOL. 23</p>
           <h2><em>Happy Birthday,</em><br />Dishu Baby.</h2>
-          <p className="hero-lede">Happy Birthday, Dishu Baby. I can’t believe you’re 23. My baby gyal is becoming a BIGGGG GYALLLL. No matter how old you get, you’ll always be my baby gyal.</p>
+          <p className="hero-lede">Happy Birthday, Dishu Baby. I can’t believe you’re 23. My baby gyal is becoming a BIGGGG GYALLLL. No matter how old you get, you’ll always be my baby gyal. I tried my best to make this little thing for you, because a birthday card is like so lame and outdated Oh My Goshhh. I hope you like it :*</p>
           <div className="hero-actions">
             <a className="primary-button" href="#film">watch your birthday film <span>▶</span></a>
             <button className="text-button" onClick={cyclePhrase}>press for a Dishu-ism <span>↻</span></button>
           </div>
-          <div className="phrase-display" aria-live="polite">“{dishuisms[phraseIndex]}”</div>
+          <div className="phrase-display" aria-live="polite">{phraseIndex >= 0 ? `“${dishuisms[phraseIndex]}”` : ""}</div>
         </div>
 
         <div className="hero-collage" aria-label="A collage of birthday memories">
@@ -273,8 +273,9 @@ export default function Home() {
         <div className="note-card">
           <p className="eyebrow"><span /> ONE LAST THING</p>
           <h2>For my favourite<br /><em>eepy baby gyal.</em></h2>
-          <p>Happy 23rd Birthday. You are the best thing that has ever happened to me. The amount of joy and happiness you bring into every day is unmatched. I try my best to keep up, and I just hope I can make you the happiest girl today, tomorrow and forever.</p>
-          <p>I can’t wait for more drives, horrible photos, dogs, side quests and the most random ordinary moments that somehow become our favourites.</p>
+          <p>Happy 23rd Birthday, Dishu Baby. You are genuinely the best thing that has ever happened to me. No one brings as much happiness, chaos and unnecessary entertainment into my life as you do.</p>
+          <p>Thank you for loving me through all my bullshit, caring for me unconditionally and putting so much time, effort and heart into us. You really are the sweetest gyal ever. I promise to do everything I can to make you the happiest gyal ever, no matter what.</p>
+          <p>I can’t wait for more drives, bad photos, dogs, random side quests and all the completely ordinary moments that somehow become our favourites. I love you sm, baby gyal. ❤️</p>
           <p className="sign-off">Love you, Dishu Baby. <span>Saketh</span></p>
           <button className="celebrate-button" onClick={celebrate}>LOVE YOUUU! <span>♡</span></button>
         </div>
