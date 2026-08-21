@@ -139,8 +139,9 @@ export default function Home() {
         <div className="film-layout">
           <div className="phone-frame">
             <div className="phone-speaker" />
-            <video controls playsInline preload="metadata" poster="./media/p18.webp">
+            <video controls playsInline preload="auto" poster="./media/birthday-poster.jpg">
               <source src="./media/birthday-reel.mp4" type="video/mp4" />
+              Your browser does not support MP4 video.
             </video>
           </div>
           <aside className="film-note">
@@ -198,19 +199,44 @@ export default function Home() {
         <div className="mini-copy">
           <p>ALSO CAUGHT ON CAMERA</p>
           <h2>Talent. Grace.<br /><em>Other allegations.</em></h2>
-          <p className="muted-dark">Two more pieces of evidence from the archives.</p>
+          <p className="muted-dark">Five more pieces of evidence from the archives.</p>
         </div>
-        <div className="mini-video-card">
-          <video controls playsInline preload="metadata" poster="./media/bowling-poster.jpg">
-            <source src="./media/bowling.mp4" type="video/mp4" />
-          </video>
-          <div><span>Exhibit A</span><b>The bowling prodigy</b></div>
-        </div>
-        <div className="mini-video-card">
-          <video controls playsInline preload="metadata" poster="./media/cab-poster.jpg">
-            <source src="./media/cab.mp4" type="video/mp4" />
-          </video>
-          <div><span>Exhibit B</span><b>Cab confessions</b></div>
+        <div className="mini-video-grid">
+          <div className="mini-video-card">
+            <video controls playsInline preload="metadata" poster="./media/bowling-poster.jpg">
+              <source src="./media/bowling.mp4" type="video/mp4" />
+              Your browser does not support MP4 video.
+            </video>
+            <div><span>Exhibit A</span><b>The bowling prodigy</b></div>
+          </div>
+          <div className="mini-video-card mini-video-card--landscape">
+            <video controls playsInline preload="metadata" poster="./media/cab-poster.jpg">
+              <source src="./media/cab.mp4" type="video/mp4" />
+              Your browser does not support MP4 video.
+            </video>
+            <div><span>Exhibit B</span><b>Cab confessions</b></div>
+          </div>
+          <div className="mini-video-card">
+            <video controls playsInline preload="metadata" poster="./media/off-road-poster.jpg">
+              <source src="./media/off-road-era.mp4" type="video/mp4" />
+              Your browser does not support MP4 video.
+            </video>
+            <div><span>Exhibit C</span><b>Off-road era</b></div>
+          </div>
+          <div className="mini-video-card">
+            <video controls playsInline preload="metadata" poster="./media/forest-poster.jpg">
+              <source src="./media/forest-dispatch.mp4" type="video/mp4" />
+              Your browser does not support MP4 video.
+            </video>
+            <div><span>Exhibit D</span><b>Forest dispatch</b></div>
+          </div>
+          <div className="mini-video-card">
+            <video controls playsInline preload="metadata" poster="./media/passenger-poster.jpg">
+              <source src="./media/passenger-princess.mp4" type="video/mp4" />
+              Your browser does not support MP4 video.
+            </video>
+            <div><span>Exhibit E</span><b>Passenger princess duties</b></div>
+          </div>
         </div>
       </section>
 
