@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 const dishuisms = [
   "how can youu?",
   "BAYBEEEE",
+  "HEYYY?",
+  "Bevvy gyal",
+  "Chippy gyal",
+  "hungee gyal",
   "I’M JUST A EEPY GYALL",
   "I’M JUST A STIMMY GYALL",
 ];
@@ -28,6 +32,11 @@ const photos = [
   { src: "./media/p16.webp", alt: "Dishu and her giant black dog", className: "tall" },
   { src: "./media/p17.webp", alt: "A shopping selfie after training", className: "tall" },
   { src: "./media/p18.webp", alt: "A golden mirror photo together", className: "wide" },
+  { src: "./media/p19.webp", alt: "Dishu posing with her sleepy blue plush", className: "tall" },
+  { src: "./media/p20.webp", alt: "A night out together", className: "tall" },
+  { src: "./media/p21.webp", alt: "A matching floral photo together", className: "tall" },
+  { src: "./media/p22.webp", alt: "A mirror selfie together", className: "tall" },
+  { src: "./media/p23.webp", alt: "A sunny drive together", className: "wide" },
 ];
 
 function Sparkles({ burst = false }: { burst?: boolean }) {
@@ -92,7 +101,9 @@ export default function Home() {
       {burst && <Sparkles burst />}
 
       <nav className="top-nav" aria-label="Birthday page navigation">
-        <a className="brand" href="#top">D<span>23</span></a>
+        <a className="brand" href="#top" aria-label="Dishu 23">
+          <span className="brand-letter">D</span><span className="brand-number">23</span>
+        </a>
         <div className="nav-links">
           <a href="#film">the film</a>
           <a href="#field-guide">the lore</a>
@@ -117,7 +128,7 @@ export default function Home() {
           <div className="hero-photo hero-photo--one"><img src="./media/p11.webp" alt="Dishu with a plush octopus on her head" /></div>
           <div className="hero-photo hero-photo--two"><img src="./media/p18.webp" alt="Saketh and Dishu in a mirror" /></div>
           <div className="hero-photo hero-photo--three"><img src="./media/p09.webp" alt="Photo-booth pictures together" /></div>
-          <span className="sticker sticker--pink">cutie<br />certified</span>
+          <span className="sticker sticker--pink">certified<br />cutie</span>
           <span className="sticker sticker--yellow">23!</span>
           <span className="scribble" aria-hidden="true">↝</span>
         </div>
@@ -198,7 +209,7 @@ export default function Home() {
       <section className="mini-films">
         <div className="mini-copy">
           <p>ALSO CAUGHT ON CAMERA</p>
-          <h2>Talent. Grace.<br /><em>Other allegations.</em></h2>
+          <h2>Just Dishu<br /><em>being Dishu.</em></h2>
           <p className="muted-dark">Five more pieces of evidence from the archives.</p>
         </div>
         <div className="mini-video-grid">
@@ -244,7 +255,7 @@ export default function Home() {
         <div className="section-heading memories-heading">
           <div>
             <p>03 / THE CAMERA ROLL</p>
-            <h2>Small moments.<br /><em>Big favourites.</em></h2>
+            <h2>A few of<br /><em>my favourites.</em></h2>
           </div>
           <p className="gallery-intro">A lovingly curated archive of our relationship in a nutshell.</p>
         </div>
@@ -265,12 +276,12 @@ export default function Home() {
           <p>Happy 23rd Birthday. You are the best thing that has ever happened to me. The amount of joy and happiness you bring into every day is unmatched. I try my best to keep up, and I just hope I can make you the happiest girl today, tomorrow and forever.</p>
           <p>I can’t wait for more drives, horrible photos, dogs, side quests and the most random ordinary moments that somehow become our favourites.</p>
           <p className="sign-off">Love you, Dishu Baby. <span>Saketh</span></p>
-          <button className="celebrate-button" onClick={celebrate}>BAYBEEEE! <span>♡</span></button>
+          <button className="celebrate-button" onClick={celebrate}>LOVE YOUUU! <span>♡</span></button>
         </div>
         <div className="final-photo"><img src="./media/p18.webp" alt="Saketh and Dishu together" /><span>US, ALWAYS</span></div>
       </section>
 
-      <footer><span>HAPPY 23RD, DISHU BABY</span><b>Made with alarming levels of affection.</b><span>2026</span></footer>
+      <footer><span>HAPPY 23RD, DISHU BABY</span><span>2026</span></footer>
 
       {lightbox !== null && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" onClick={() => setLightbox(null)}>

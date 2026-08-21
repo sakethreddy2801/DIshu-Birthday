@@ -40,8 +40,10 @@ img, video { display: block; max-width: 100%; }
 @keyframes burst { to { translate: calc(cos(var(--angle)) * 55vw) calc(sin(var(--angle)) * 55vh); rotate: 540deg; opacity: 0; } }
 
 .top-nav { position: absolute; z-index: 30; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; width: min(1380px, calc(100% - 48px)); margin: auto; padding: 24px 0; border-bottom: 1px solid var(--line); }
-.brand { display: flex; align-items: flex-start; color: var(--ink); font-family: Georgia, serif; font-size: 30px; font-style: italic; font-weight: 800; text-decoration: none; }
-.brand span { margin: -3px 0 0 2px; padding: 2px 5px; border-radius: 50%; background: var(--pink); color: white; font-family: inherit; font-size: 12px; }
+.brand { display: inline-flex; align-items: center; gap: 4px; height: 42px; padding: 4px 5px 4px 12px; border: 2px solid var(--ink); border-radius: 999px; background: white; color: var(--ink); text-decoration: none; box-shadow: 4px 4px 0 var(--pink); transform: rotate(-2deg); transition: transform .2s ease, box-shadow .2s ease; }
+.brand:hover { box-shadow: 2px 2px 0 var(--pink); transform: translate(2px, 2px) rotate(-2deg); }
+.brand-letter { font-family: Georgia, serif; font-size: 27px; font-style: italic; font-weight: 800; line-height: 1; }
+.brand-number { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 50%; background: var(--ink); color: white; font-size: 10px; font-weight: 900; letter-spacing: .04em; }
 .nav-links { display: flex; gap: 32px; }
 .nav-links a { color: var(--ink); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 .nav-links a:hover { color: #a42b5c; }
@@ -156,7 +158,6 @@ img, video { display: block; max-width: 100%; }
 .final-photo span { position: absolute; left: 25px; bottom: 25px; padding: 10px 14px; border: 1px solid white; border-radius: 999px; background: rgba(0,0,0,.32); color: white; font-size: 10px; font-weight: 900; letter-spacing: .16em; backdrop-filter: blur(8px); }
 
 footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 30px; background: var(--ink); color: white; font-size: 10px; font-weight: 800; letter-spacing: .13em; }
-footer b { color: var(--pink-soft); font-family: Georgia, serif; font-size: 14px; font-style: italic; font-weight: 400; letter-spacing: 0; }
 
 .lightbox { position: fixed; inset: 0; z-index: 900; display: grid; place-items: center; padding: 55px; background: rgba(20,10,18,.94); backdrop-filter: blur(16px); }
 .lightbox img { width: auto; max-width: min(1100px, 82vw); height: auto; max-height: 86vh; object-fit: contain; box-shadow: 0 26px 90px rgba(0,0,0,.45); }
